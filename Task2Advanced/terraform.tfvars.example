@@ -1,0 +1,7 @@
+cloud_id       = "b1g..."
+folder_id      = "b1g..."
+zone           = "ru-central1-a"
+backend_bucket = "my-tfstate-bucket"
+network_name   = "dev-network"
+subnet_name    = "dev-subnet"
+subnet_cidr    = "10.0.1.0/24"

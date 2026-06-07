@@ -64,3 +64,7 @@ cd envs/dev
 terraform init
 terraform plan -var-file="terraform.tfvars"
 terraform apply -var-file="terraform.tfvars"
+```
+
+# Задание 2
+
