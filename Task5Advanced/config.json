@@ -1,0 +1,24 @@
+{
+  "basePath": "/",
+  "baseUrl": "http://localhost:8080",
+  "title": "Будущее 2.0 – Технологический радар",
+  "description": "Целевой технологический ландшафт компании «Будущее 2.0» на горизонте 3 лет. Статусы: Adopt, Trial, Assess, Hold.",
+  "quadrants": [
+    { "id": "methods-architecture", "title": "Методы и архитектура", "color": "#0066cc" },
+    { "id": "data-analytics", "title": "Данные и аналитика", "color": "#2ca02c" },
+    { "id": "infrastructure-devops", "title": "Инфраструктура и DevOps", "color": "#ff7f0e" },
+    { "id": "languages-tools", "title": "Языки и инструменты", "color": "#d62728" }
+  ],
+  "rings": [
+    { "id": "adopt", "title": "Adopt", "color": "#5ba300", "radius": 0.2, "strokeWidth": 2 },
+    { "id": "trial", "title": "Trial", "color": "#009eb0", "radius": 0.4, "strokeWidth": 2 },
+    { "id": "assess", "title": "Assess", "color": "#c7ba00", "radius": 0.6, "strokeWidth": 2 },
+    { "id": "hold", "title": "Hold", "color": "#e09b96", "radius": 0.8, "strokeWidth": 2 }
+  ],
+  "toggles": {
+    "showSearch": true,
+    "showChart": true,
+    "showTagFilter": true,
+    "showQuadrantList": true
+  }
+}

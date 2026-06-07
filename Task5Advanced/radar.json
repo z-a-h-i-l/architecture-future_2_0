@@ -1,0 +1,42 @@
+{
+  "$schema": "https://raw.githubusercontent.com/AOEpeople/techradar/master/schema.json",
+  "id": "future2.0",
+  "name": "Будущее 2.0 Tech Radar",
+  "description": "Целевой технологический ландшафт компании «Будущее 2.0» на горизонте 3 лет.",
+  "rings": [
+    { "id": "adopt", "name": "Adopt", "color": "#5ba300" },
+    { "id": "trial", "name": "Trial", "color": "#009eb0" },
+    { "id": "assess", "name": "Assess", "color": "#c7ba00" },
+    { "id": "hold", "name": "Hold", "color": "#e09b96" }
+  ],
+  "quadrants": [
+    { "id": "methods-architecture", "name": "Методы и архитектура" },
+    { "id": "data-analytics", "name": "Данные и аналитика" },
+    { "id": "infrastructure-devops", "name": "Инфраструктура и DevOps" },
+    { "id": "languages-tools", "name": "Языки и инструменты" }
+  ],
+  "entries": [
+    { "quadrant": "methods-architecture", "ring": "adopt", "label": "Data Mesh", "active": true, "moved": 0 },
+    { "quadrant": "methods-architecture", "ring": "adopt", "label": "Event-Driven Architecture", "active": true, "moved": 0 },
+    { "quadrant": "methods-architecture", "ring": "adopt", "label": "Self-Service BI", "active": true, "moved": 0 },
+    { "quadrant": "methods-architecture", "ring": "adopt", "label": "Apache Kafka", "active": true, "moved": 0 },
+    { "quadrant": "methods-architecture", "ring": "trial", "label": "Kafka Streams / Flink", "active": true, "moved": 0 },
+
+    { "quadrant": "data-analytics", "ring": "adopt", "label": "Data Lake (Object Storage)", "active": true, "moved": 0 },
+    { "quadrant": "data-analytics", "ring": "trial", "label": "ClickHouse", "active": true, "moved": 0 },
+    { "quadrant": "data-analytics", "ring": "trial", "label": "Superset", "active": true, "moved": 0 },
+
+    { "quadrant": "infrastructure-devops", "ring": "adopt", "label": "Kubernetes", "active": true, "moved": 0 },
+    { "quadrant": "infrastructure-devops", "ring": "adopt", "label": "Terraform", "active": true, "moved": 0 },
+    { "quadrant": "infrastructure-devops", "ring": "adopt", "label": "Schema Registry", "active": true, "moved": 0 },
+    { "quadrant": "infrastructure-devops", "ring": "adopt", "label": "Keycloak", "active": true, "moved": 0 },
+    { "quadrant": "infrastructure-devops", "ring": "assess", "label": "Data Catalog", "active": true, "moved": 0 },
+
+    { "quadrant": "languages-tools", "ring": "adopt", "label": "Python", "active": true, "moved": 0 },
+    { "quadrant": "languages-tools", "ring": "adopt", "label": "Golang / Java", "active": true, "moved": 0 },
+    { "quadrant": "languages-tools", "ring": "hold", "label": "SQL Server DWH", "active": true, "moved": 0 },
+    { "quadrant": "languages-tools", "ring": "hold", "label": "Apache Camel ESB", "active": true, "moved": 0 },
+    { "quadrant": "languages-tools", "ring": "hold", "label": "PowerBuilder", "active": true, "moved": 0 },
+    { "quadrant": "languages-tools", "ring": "hold", "label": "Power BI", "active": true, "moved": 0 }
+  ]
+}
