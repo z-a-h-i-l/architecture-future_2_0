@@ -1,5 +1,3 @@
-# Задание 1
-
 ## Создана папка Task1Advanced
 ```bash
 Task1Advanced/
