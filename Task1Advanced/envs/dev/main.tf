@@ -1,5 +1,3 @@
-# envs/dev/main.tf
-
 terraform {
   required_providers {
     yandex = {

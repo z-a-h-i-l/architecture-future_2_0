@@ -1,5 +1,3 @@
-# envs/dev/terraform.tfvars
-
 # ---- Аутентификация и размещение ----
 cloud_id                 = "b1g1a2b3c4d5e6f7g8h9"
 folder_id                = "b1g9h8f7e6d5c4b3a2i1"
