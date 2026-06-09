@@ -1,0 +1,60 @@
+# .gitlab-ci.yml
+stages:
+  - init
+  - plan
+  - apply
+
+variables:
+  TF_ROOT: ${CI_PROJECT_DIR}
+  # Переменные окружения для провайдера Yandex Cloud
+  YC_SERVICE_ACCOUNT_KEY_FILE: /tmp/key.json
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - .terraform
+
+before_script:
+  # Создаём файл ключа сервисного аккаунта из переменной CI/CD
+  - echo "${YC_SERVICE_ACCOUNT_KEY}" > ${YC_SERVICE_ACCOUNT_KEY_FILE}
+  - terraform --version
+
+# Шаг 1: инициализация с подключением backend
+terraform-init:
+  stage: init
+  script:
+    - terraform init
+      -backend-config="access_key=${BACKEND_ACCESS_KEY}"
+      -backend-config="secret_key=${BACKEND_SECRET_KEY}"
+
+# Шаг 2: создание плана
+terraform-plan:
+  stage: plan
+  dependencies:
+    - terraform-init
+  script:
+    - terraform plan
+      -var="cloud_id=${CLOUD_ID}"
+      -var="folder_id=${FOLDER_ID}"
+      -var="backend_bucket=${BACKEND_BUCKET}"
+      -var="network_name=main-network"
+      -var="subnet_name=main-subnet"
+      -var="subnet_cidr=10.0.0.0/24"
+      -out=tfplan
+  artifacts:
+    paths:
+      - tfplan
+    expire_in: 1 day
+
+# Шаг 3: применение (ручной запуск только на main)
+terraform-apply:
+  stage: apply
+  dependencies:
+    - terraform-plan
+  script:
+    - terraform apply -auto-approve tfplan
+  when: manual
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+  environment:
+    name: production
